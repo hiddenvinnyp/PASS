@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:text="Батарея: 0%"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <RelativeLayout
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="11.95"
+            android:gravity="top" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="334dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/nao" />
+
+            <TextView
+                android:id="@+id/LElbowJoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/LShoulderJoint"
+                android:layout_marginLeft="21dp"
+                android:layout_marginTop="54dp"
+                android:text="00"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/RShoulderJoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/LElbowJoint"
+                android:layout_alignRight="@+id/imageView1"
+                android:layout_marginRight="46dp"
+                android:text="00"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/RHipJoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RElbowJoint"
+                android:layout_marginRight="19dp"
+                android:layout_marginTop="24dp"
+                android:layout_toLeftOf="@+id/RShoulderJoint"
+                android:text="00"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/LHipJoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/RHipJoint"
+                android:layout_alignBottom="@+id/RHipJoint"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@+id/LShoulderJoint"
+                android:text="00"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/HeadProcessor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/imageView1"
+                android:layout_centerHorizontal="true"
+                android:text="00"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/LKneeJoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/LHipJoint"
+                android:layout_marginTop="58dp"
+                android:layout_toRightOf="@+id/LShoulderJoint"
+                android:text="00"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/RKneeJoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/LKneeJoint"
+                android:layout_alignBottom="@+id/LKneeJoint"
+                android:layout_toLeftOf="@+id/RShoulderJoint"
+                android:text="00"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/RWristJoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/LKneeJoint"
+                android:layout_alignLeft="@+id/RElbowJoint"
+                android:text="00"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/LWristJoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/LKneeJoint"
+                android:layout_toLeftOf="@+id/LShoulderJoint"
+                android:text="00"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/RAnkleJoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imageView1"
+                android:layout_alignLeft="@+id/RWristJoint"
+                android:layout_marginBottom="29dp"
+                android:text="00"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/LShoulderJoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/HeadProcessor"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="19dp"
+                android:layout_toRightOf="@+id/LElbowJoint"
+                android:text="00"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/RElbowJoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/LElbowJoint"
+                android:layout_alignBottom="@+id/LElbowJoint"
+                android:layout_alignRight="@+id/imageView1"
+                android:layout_marginRight="16dp"
+                android:text="00"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/LAnkleJoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/RAnkleJoint"
+                android:layout_alignBottom="@+id/RAnkleJoint"
+                android:layout_toRightOf="@+id/LWristJoint"
+                android:text="00"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
