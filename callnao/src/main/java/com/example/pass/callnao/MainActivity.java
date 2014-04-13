@@ -1,6 +1,7 @@
 package com.example.pass.callnao;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -45,6 +46,8 @@ public class MainActivity extends ActionBarActivity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+        /*Intent intent = new Intent(this, connect.class);
+        mNavigationDrawerFragment.startActivity(intent);*/
 
     }
 
@@ -136,8 +139,20 @@ public class MainActivity extends ActionBarActivity
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+
+            /*rootView.findViewById(R.id.demo_collection_button)
+                    .setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent = new Intent(getActivity(), connect.class);
+                            startActivity(intent);
+                        }
+                    });*/
             int a = getArguments().getInt(ARG_SECTION_NUMBER);
-            /*if (a == 1){
+            if (a == 1){
+                /*Intent intent = new Intent(getActivity(), connect.class);
+                startActivity(intent);*/
+                //this.setContent(intent);
                 rootView = inflater.inflate(R.layout.fragment_connect, container, false);
             } else if (a == 2){
                 rootView = inflater.inflate(R.layout.fragment_teleoperation, container, false);
@@ -145,7 +160,7 @@ public class MainActivity extends ActionBarActivity
                 rootView = inflater.inflate(R.layout.fragment_commands, container, false);
             } else if (a == 4){
                 rootView = inflater.inflate(R.layout.fragment_states, container, false);
-            }*/
+            }
             //TextView textView = (TextView) rootView.findViewById(R.id.section_label);
             //textView.setText(Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;

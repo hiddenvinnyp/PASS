@@ -42,10 +42,10 @@ public class connect extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.fragment_connect);
-        loadData();
+        //loadData();
 
     }
-    public void loadData(){
+/*    public void loadData(){
         tw=(TextView)(findViewById(R.id.ip));
         Button bt = (Button)(findViewById(R.id.connect));
         if(GlobalValues.getInstance().nao.isNaoOnline())
@@ -65,7 +65,7 @@ public class connect extends Activity {
             bt.setEnabled(true);
             Toast.makeText(this, "����� �� ���������", Toast.LENGTH_LONG).show();
         }
-    }
+    }*/
     public void clickConnect(View view)
     {
         ConnectivityManager connManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
@@ -208,6 +208,6 @@ public class connect extends Activity {
     @Override
     public void onResume(){
         super.onResume();
-        loadData();
+        //loadData();
     }
 }
